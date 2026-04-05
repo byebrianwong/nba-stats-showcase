@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b026ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#b026ff" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="strip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b026ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#b026ff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#b026ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#b026ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#12121a" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="circle">
+      <circle cx="100" cy="100" r="100"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#circle)">
+    <!-- Background -->
+    <rect width="200" height="200" fill="#12121a"/>
+    <rect width="200" height="200" fill="url(#glow)"/>
+    <!-- Basketball seam lines -->
+    <ellipse cx="100" cy="100" rx="70" ry="95" fill="none" stroke="#b026ff" stroke-opacity="0.08" stroke-width="1.5"/>
+    <ellipse cx="100" cy="100" rx="95" ry="70" fill="none" stroke="#b026ff" stroke-opacity="0.08" stroke-width="1.5"/>
+    <line x1="0" y1="100" x2="200" y2="100" stroke="#b026ff" stroke-opacity="0.06" stroke-width="1"/>
+    <line x1="100" y1="0" x2="100" y2="200" stroke="#b026ff" stroke-opacity="0.06" stroke-width="1"/>
+    <!-- Silhouette shape - abstract player -->
+    <circle cx="100" cy="52" r="18" fill="url(#accent)" opacity="0.3"/>
+    <path d="M72 72 Q100 65 128 72 L135 120 Q100 130 65 120 Z" fill="url(#accent)" opacity="0.2"/>
+    <!-- Initials -->
+    <text x="100" y="48" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#b026ff" letter-spacing="3">LJ</text>
+    <!-- Jersey Number -->
+    <text x="100" y="128" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="900" fill="white" opacity="0.95">23</text>
+    <!-- Bottom accent strip -->
+    <rect x="0" y="175" width="200" height="4" fill="url(#strip)"/>
+    <rect x="0" y="182" width="200" height="18" fill="#b026ff" opacity="0.15"/>
+    <!-- Border ring -->
+    <circle cx="100" cy="100" r="98" fill="none" stroke="#b026ff" stroke-opacity="0.3" stroke-width="1.5"/>
+  </g>
+</svg>
