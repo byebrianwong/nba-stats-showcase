@@ -17,7 +17,7 @@ export interface RadarChartProps {
 }
 
 const sizeMap = {
-  sm: 160,
+  sm: 190,
   md: 260,
   lg: 360,
 }

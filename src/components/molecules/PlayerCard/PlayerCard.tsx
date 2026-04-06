@@ -95,7 +95,7 @@ export function PlayerCard({ player, onClick }: PlayerCardProps) {
           stats={player.stats}
           color={player.accentColor}
           size="sm"
-          showLabels={false}
+          showLabels={true}
           fillOpacity={0.15}
         />
       </div>
