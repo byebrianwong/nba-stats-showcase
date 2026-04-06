@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { MemoryRouter, Route, Routes } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import { PlayerDetailPage } from './PlayerDetailPage'
 
 const meta = {
@@ -8,17 +8,10 @@ const meta = {
   parameters: { layout: 'fullscreen' },
   decorators: [
     (Story) => (
-      <MemoryRouter initialEntries={['/player/lebron-james']}>
-        <Routes>
-          <Route
-            path="/player/:id"
-            element={
-              <div className="bg-bg-primary min-h-screen p-8">
-                <Story />
-              </div>
-            }
-          />
-        </Routes>
+      <MemoryRouter>
+        <div className="bg-bg-primary min-h-screen p-8">
+          <Story />
+        </div>
       </MemoryRouter>
     ),
   ],
@@ -28,77 +21,17 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const LeBron: Story = {
-  decorators: [
-    (Story) => (
-      <MemoryRouter initialEntries={['/player/lebron-james']}>
-        <Routes>
-          <Route
-            path="/player/:id"
-            element={
-              <div className="bg-bg-primary min-h-screen p-8">
-                <Story />
-              </div>
-            }
-          />
-        </Routes>
-      </MemoryRouter>
-    ),
-  ],
+  args: { playerId: 'lebron-james' },
 }
 
 export const Curry: Story = {
-  decorators: [
-    (Story) => (
-      <MemoryRouter initialEntries={['/player/stephen-curry']}>
-        <Routes>
-          <Route
-            path="/player/:id"
-            element={
-              <div className="bg-bg-primary min-h-screen p-8">
-                <Story />
-              </div>
-            }
-          />
-        </Routes>
-      </MemoryRouter>
-    ),
-  ],
+  args: { playerId: 'stephen-curry' },
 }
 
 export const Jokic: Story = {
-  decorators: [
-    (Story) => (
-      <MemoryRouter initialEntries={['/player/nikola-jokic']}>
-        <Routes>
-          <Route
-            path="/player/:id"
-            element={
-              <div className="bg-bg-primary min-h-screen p-8">
-                <Story />
-              </div>
-            }
-          />
-        </Routes>
-      </MemoryRouter>
-    ),
-  ],
+  args: { playerId: 'nikola-jokic' },
 }
 
 export const Wembanyama: Story = {
-  decorators: [
-    (Story) => (
-      <MemoryRouter initialEntries={['/player/victor-wembanyama']}>
-        <Routes>
-          <Route
-            path="/player/:id"
-            element={
-              <div className="bg-bg-primary min-h-screen p-8">
-                <Story />
-              </div>
-            }
-          />
-        </Routes>
-      </MemoryRouter>
-    ),
-  ],
+  args: { playerId: 'victor-wembanyama' },
 }
