@@ -1,3 +1,4 @@
+// Advanced NBA metrics used for radar chart visualization
 export interface PlayerStats {
   trueShooting: number    // TS% — typically 50-70
   defensiveRating: number // DRtg — typically 100-115 (lower is better)
