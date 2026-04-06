@@ -53,6 +53,7 @@ export const NoLabels: Story = {
 }
 
 export const CompareProfiles: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
   render: () => (
     <div className="flex gap-6">
       <div className="text-center">

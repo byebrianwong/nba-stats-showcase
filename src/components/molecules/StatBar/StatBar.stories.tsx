@@ -38,6 +38,7 @@ export const LowValue: Story = {
 }
 
 export const MultipleStats: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
   render: () => (
     <div className="flex flex-col gap-4 w-80">
       <StatBar label="TS%: 64.8%" value={84} color="#00f0ff" />

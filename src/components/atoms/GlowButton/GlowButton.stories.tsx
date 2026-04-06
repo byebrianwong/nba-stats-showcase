@@ -25,6 +25,7 @@ export const Outline: Story = {
 }
 
 export const AllColors: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
   render: () => (
     <div className="flex flex-wrap gap-3">
       {[

@@ -61,6 +61,7 @@ export const Clickable: Story = {
 }
 
 export const Grid: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
   render: () => (
     <div className="grid grid-cols-2 gap-4 w-[500px]">
       {['#00f0ff', '#b026ff', '#ff6b2b', '#39ff14'].map((color) => (

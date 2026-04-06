@@ -21,7 +21,9 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const LeBron: Story = {}
+export const LeBron: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
+}
 
 export const Curry: Story = {
   args: { player: players[1] },

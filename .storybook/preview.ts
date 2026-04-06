@@ -20,6 +20,9 @@ const preview: Preview = {
     a11y: {
       test: 'todo',
     },
+    chromatic: {
+      disableSnapshot: true,
+    },
   },
   tags: ['autodocs'],
 }

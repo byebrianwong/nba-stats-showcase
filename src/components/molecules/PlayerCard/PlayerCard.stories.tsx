@@ -21,6 +21,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const LeBron: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
   args: { player: players[0] },
 }
 
@@ -33,6 +34,7 @@ export const Giannis: Story = {
 }
 
 export const Wembanyama: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
   args: { player: players[11] },
 }
 

@@ -32,6 +32,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {}
 
 export const AllColors: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
   render: () => (
     <div className="flex flex-col gap-3">
       {(['cyan', 'purple', 'orange', 'green', 'pink', 'blue', 'yellow', 'red'] as const).map(

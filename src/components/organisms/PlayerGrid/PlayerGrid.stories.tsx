@@ -14,7 +14,9 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const AllPlayers: Story = {}
+export const AllPlayers: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
+}
 
 export const FourPlayers: Story = {
   args: { players: players.slice(0, 4) },
