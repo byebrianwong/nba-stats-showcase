@@ -46,7 +46,7 @@ export function NeonText({
       style={{
         color: hex,
         textShadow: glow
-          ? `0 0 7px ${hex}, 0 0 20px ${hex}80, 0 0 40px ${hex}40`
+          ? `0 0 10px ${hex}, 0 0 30px ${hex}90, 0 0 60px ${hex}50, 0 0 100px ${hex}20`
           : undefined,
       }}
     >
