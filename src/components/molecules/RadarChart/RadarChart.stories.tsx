@@ -1,9 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { RadarChart } from './RadarChart'
+import { players } from '../../../data/players'
 
-const allRounder = { scoring: 85, passing: 85, rebounding: 80, defense: 82, athleticism: 88 }
-const scorer = { scoring: 97, passing: 50, rebounding: 40, defense: 45, athleticism: 72 }
-const defender = { scoring: 55, passing: 45, rebounding: 88, defense: 95, athleticism: 90 }
+// Jokic — elite all-rounder
+const allRounder = players[5].stats
+// Curry — elite scorer/efficiency
+const scorer = players[1].stats
+// Wembanyama — elite defender
+const defender = players[11].stats
 
 const meta = {
   title: 'Molecules/RadarChart',
@@ -36,7 +40,7 @@ export const Large: Story = {
   args: { size: 'lg', stats: allRounder, color: '#39ff14' },
 }
 
-export const PureScorer: Story = {
+export const EliteScorer: Story = {
   args: { stats: scorer, color: '#ff6b2b' },
 }
 
@@ -53,15 +57,15 @@ export const CompareProfiles: Story = {
     <div className="flex gap-6">
       <div className="text-center">
         <RadarChart stats={allRounder} color="#00f0ff" size="sm" />
-        <p className="text-text-secondary text-xs mt-2">All-Rounder</p>
+        <p className="text-text-secondary text-xs mt-2">Jokic (All-Rounder)</p>
       </div>
       <div className="text-center">
         <RadarChart stats={scorer} color="#ff6b2b" size="sm" />
-        <p className="text-text-secondary text-xs mt-2">Scorer</p>
+        <p className="text-text-secondary text-xs mt-2">Curry (Scorer)</p>
       </div>
       <div className="text-center">
         <RadarChart stats={defender} color="#39ff14" size="sm" />
-        <p className="text-text-secondary text-xs mt-2">Defender</p>
+        <p className="text-text-secondary text-xs mt-2">Wemby (Defender)</p>
       </div>
     </div>
   ),

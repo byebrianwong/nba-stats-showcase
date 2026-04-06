@@ -5,7 +5,7 @@ import {
   Radar,
   ResponsiveContainer,
 } from 'recharts'
-import { PlayerStats } from '../../../data/types'
+import { PlayerStats, normalizeStats } from '../../../data/types'
 
 export interface RadarChartProps {
   stats: PlayerStats
@@ -30,8 +30,9 @@ export function RadarChart({
   showLabels = true,
   fillOpacity = 0.2,
 }: RadarChartProps) {
-  const data = Object.entries(stats).map(([key, value]) => ({
-    category: key.charAt(0).toUpperCase() + key.slice(1),
+  const normalized = normalizeStats(stats)
+  const data = Object.entries(normalized).map(([label, value]) => ({
+    category: label,
     value,
     fullMark: 100,
   }))

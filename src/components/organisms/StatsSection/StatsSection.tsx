@@ -1,4 +1,4 @@
-import { Player } from '../../../data/types'
+import { Player, normalizeStats } from '../../../data/types'
 import { RadarChart } from '../../molecules/RadarChart'
 import { StatBar } from '../../molecules/StatBar'
 import { SeasonHighlight } from '../../molecules/SeasonHighlight'
@@ -8,13 +8,30 @@ export interface StatsSectionProps {
   player: Player
 }
 
+const rawLabels: Record<string, string> = {
+  trueShooting: 'TS%',
+  defensiveRating: 'Def Rtg',
+  epm: 'EPM',
+  per: 'PER',
+  bpm: 'BPM',
+}
+
+const rawFormats: Record<string, (v: number) => string> = {
+  trueShooting: (v) => `${v.toFixed(1)}%`,
+  defensiveRating: (v) => v.toFixed(1),
+  epm: (v) => (v >= 0 ? '+' : '') + v.toFixed(1),
+  per: (v) => v.toFixed(1),
+  bpm: (v) => (v >= 0 ? '+' : '') + v.toFixed(1),
+}
+
 export function StatsSection({ player }: StatsSectionProps) {
   const { stats, seasonAverages, accentColor } = player
+  const normalized = normalizeStats(stats)
 
   return (
     <div className="space-y-8">
       <NeonText as="h2" size="lg" color={accentColor}>
-        Player Ratings
+        Advanced Ratings
       </NeonText>
 
       {/* Radar + Bars side by side */}
@@ -27,8 +44,8 @@ export function StatsSection({ player }: StatsSectionProps) {
           {Object.entries(stats).map(([key, value]) => (
             <StatBar
               key={key}
-              label={key}
-              value={value}
+              label={`${rawLabels[key] || key}: ${rawFormats[key]?.(value) ?? value}`}
+              value={normalized[rawLabels[key] || key] ?? 0}
               color={accentColor}
             />
           ))}

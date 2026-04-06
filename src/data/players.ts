@@ -14,7 +14,8 @@ export const players: Player[] = [
     age: 41,
     imageUrl: '/players/lebron-james.svg',
     accentColor: '#b026ff',
-    stats: { scoring: 95, passing: 88, rebounding: 78, defense: 72, athleticism: 85 },
+    // TS% 58.4, DRtg 110.2, EPM +3.8, PER 24.5, BPM +5.2
+    stats: { trueShooting: 58.4, defensiveRating: 110.2, epm: 3.8, per: 24.5, bpm: 5.2 },
     seasonAverages: {
       points: 23.5, assists: 9.1, rebounds: 7.9, steals: 1.3, blocks: 0.5,
       fieldGoalPct: 50.0, threePointPct: 40.8, freeThrowPct: 75.0, minutesPerGame: 35.2,
@@ -39,7 +40,8 @@ export const players: Player[] = [
     age: 37,
     imageUrl: '/players/stephen-curry.svg',
     accentColor: '#ffe600',
-    stats: { scoring: 97, passing: 82, rebounding: 45, defense: 60, athleticism: 72 },
+    // TS% 63.2, DRtg 112.5, EPM +4.1, PER 23.8, BPM +4.5
+    stats: { trueShooting: 63.2, defensiveRating: 112.5, epm: 4.1, per: 23.8, bpm: 4.5 },
     seasonAverages: {
       points: 26.4, assists: 6.1, rebounds: 4.5, steals: 1.2, blocks: 0.4,
       fieldGoalPct: 47.3, threePointPct: 42.7, freeThrowPct: 91.5, minutesPerGame: 34.5,
@@ -64,7 +66,8 @@ export const players: Player[] = [
     age: 37,
     imageUrl: '/players/kevin-durant.svg',
     accentColor: '#ff6b2b',
-    stats: { scoring: 96, passing: 70, rebounding: 68, defense: 65, athleticism: 80 },
+    // TS% 61.5, DRtg 111.8, EPM +3.5, PER 25.1, BPM +4.8
+    stats: { trueShooting: 61.5, defensiveRating: 111.8, epm: 3.5, per: 25.1, bpm: 4.8 },
     seasonAverages: {
       points: 27.1, assists: 5.0, rebounds: 6.6, steals: 0.9, blocks: 1.4,
       fieldGoalPct: 52.3, threePointPct: 40.1, freeThrowPct: 89.2, minutesPerGame: 36.0,
@@ -89,7 +92,8 @@ export const players: Player[] = [
     age: 30,
     imageUrl: '/players/giannis-antetokounmpo.svg',
     accentColor: '#39ff14',
-    stats: { scoring: 92, passing: 68, rebounding: 88, defense: 85, athleticism: 98 },
+    // TS% 60.8, DRtg 105.2, EPM +7.2, PER 31.2, BPM +9.1
+    stats: { trueShooting: 60.8, defensiveRating: 105.2, epm: 7.2, per: 31.2, bpm: 9.1 },
     seasonAverages: {
       points: 31.1, assists: 5.8, rebounds: 11.8, steals: 1.1, blocks: 1.5,
       fieldGoalPct: 61.1, threePointPct: 27.4, freeThrowPct: 65.7, minutesPerGame: 35.2,
@@ -114,7 +118,8 @@ export const players: Player[] = [
     age: 26,
     imageUrl: '/players/luka-doncic.svg',
     accentColor: '#4d6dff',
-    stats: { scoring: 94, passing: 90, rebounding: 72, defense: 55, athleticism: 70 },
+    // TS% 58.9, DRtg 113.1, EPM +4.5, PER 26.3, BPM +5.8
+    stats: { trueShooting: 58.9, defensiveRating: 113.1, epm: 4.5, per: 26.3, bpm: 5.8 },
     seasonAverages: {
       points: 28.7, assists: 8.3, rebounds: 8.4, steals: 1.4, blocks: 0.5,
       fieldGoalPct: 48.7, threePointPct: 35.4, freeThrowPct: 78.6, minutesPerGame: 36.2,
@@ -139,7 +144,8 @@ export const players: Player[] = [
     age: 30,
     imageUrl: '/players/nikola-jokic.svg',
     accentColor: '#00f0ff',
-    stats: { scoring: 88, passing: 97, rebounding: 92, defense: 70, athleticism: 55 },
+    // TS% 64.8, DRtg 107.8, EPM +8.9, PER 32.5, BPM +12.5
+    stats: { trueShooting: 64.8, defensiveRating: 107.8, epm: 8.9, per: 32.5, bpm: 12.5 },
     seasonAverages: {
       points: 26.4, assists: 9.8, rebounds: 12.4, steals: 1.4, blocks: 0.9,
       fieldGoalPct: 58.3, threePointPct: 38.2, freeThrowPct: 82.1, minutesPerGame: 34.6,
@@ -164,7 +170,8 @@ export const players: Player[] = [
     age: 27,
     imageUrl: '/players/jayson-tatum.svg',
     accentColor: '#39ff14',
-    stats: { scoring: 90, passing: 65, rebounding: 72, defense: 75, athleticism: 82 },
+    // TS% 58.1, DRtg 107.5, EPM +4.2, PER 23.1, BPM +4.0
+    stats: { trueShooting: 58.1, defensiveRating: 107.5, epm: 4.2, per: 23.1, bpm: 4.0 },
     seasonAverages: {
       points: 26.9, assists: 4.9, rebounds: 8.1, steals: 1.0, blocks: 0.6,
       fieldGoalPct: 47.1, threePointPct: 37.6, freeThrowPct: 83.8, minutesPerGame: 35.8,
@@ -189,7 +196,8 @@ export const players: Player[] = [
     age: 31,
     imageUrl: '/players/joel-embiid.svg',
     accentColor: '#4d6dff',
-    stats: { scoring: 93, passing: 55, rebounding: 85, defense: 88, athleticism: 78 },
+    // TS% 63.0, DRtg 106.1, EPM +5.8, PER 30.6, BPM +7.5
+    stats: { trueShooting: 63.0, defensiveRating: 106.1, epm: 5.8, per: 30.6, bpm: 7.5 },
     seasonAverages: {
       points: 33.1, assists: 5.7, rebounds: 11.2, steals: 1.0, blocks: 1.7,
       fieldGoalPct: 52.9, threePointPct: 33.0, freeThrowPct: 88.6, minutesPerGame: 34.0,
@@ -214,7 +222,8 @@ export const players: Player[] = [
     age: 32,
     imageUrl: '/players/anthony-davis.svg',
     accentColor: '#b026ff',
-    stats: { scoring: 85, passing: 48, rebounding: 88, defense: 95, athleticism: 88 },
+    // TS% 60.2, DRtg 104.8, EPM +4.6, PER 26.8, BPM +5.5
+    stats: { trueShooting: 60.2, defensiveRating: 104.8, epm: 4.6, per: 26.8, bpm: 5.5 },
     seasonAverages: {
       points: 24.7, assists: 3.5, rebounds: 12.6, steals: 1.2, blocks: 2.3,
       fieldGoalPct: 55.6, threePointPct: 27.1, freeThrowPct: 78.9, minutesPerGame: 35.5,
@@ -239,7 +248,8 @@ export const players: Player[] = [
     age: 25,
     imageUrl: '/players/ja-morant.svg',
     accentColor: '#00f0ff',
-    stats: { scoring: 88, passing: 80, rebounding: 55, defense: 55, athleticism: 98 },
+    // TS% 55.8, DRtg 112.0, EPM +1.2, PER 20.5, BPM +2.1
+    stats: { trueShooting: 55.8, defensiveRating: 112.0, epm: 1.2, per: 20.5, bpm: 2.1 },
     seasonAverages: {
       points: 25.1, assists: 8.1, rebounds: 5.6, steals: 1.1, blocks: 0.3,
       fieldGoalPct: 46.7, threePointPct: 34.2, freeThrowPct: 74.8, minutesPerGame: 33.5,
@@ -264,7 +274,8 @@ export const players: Player[] = [
     age: 26,
     imageUrl: '/players/shai-gilgeous-alexander.svg',
     accentColor: '#ff2d95',
-    stats: { scoring: 95, passing: 72, rebounding: 55, defense: 78, athleticism: 85 },
+    // TS% 61.7, DRtg 104.5, EPM +7.8, PER 28.9, BPM +8.4
+    stats: { trueShooting: 61.7, defensiveRating: 104.5, epm: 7.8, per: 28.9, bpm: 8.4 },
     seasonAverages: {
       points: 30.1, assists: 6.2, rebounds: 5.5, steals: 2.0, blocks: 0.9,
       fieldGoalPct: 53.5, threePointPct: 35.3, freeThrowPct: 87.4, minutesPerGame: 34.0,
@@ -289,7 +300,8 @@ export const players: Player[] = [
     age: 21,
     imageUrl: '/players/victor-wembanyama.svg',
     accentColor: '#ff3c3c',
-    stats: { scoring: 82, passing: 60, rebounding: 80, defense: 95, athleticism: 88 },
+    // TS% 56.2, DRtg 101.5, EPM +5.1, PER 22.8, BPM +4.7
+    stats: { trueShooting: 56.2, defensiveRating: 101.5, epm: 5.1, per: 22.8, bpm: 4.7 },
     seasonAverages: {
       points: 21.4, assists: 3.9, rebounds: 10.6, steals: 1.2, blocks: 3.6,
       fieldGoalPct: 46.5, threePointPct: 32.5, freeThrowPct: 79.8, minutesPerGame: 32.8,
